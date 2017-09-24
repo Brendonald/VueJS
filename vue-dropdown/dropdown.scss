@@ -1,0 +1,98 @@
+#app {
+  width: 200px;
+}
+
+.drop-down {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  
+  &.expanded {
+    border-radius: 3px 3px 0 0;
+    border-color: #40DA4A;
+  	box-shadow: 0 0 3px 2px #D8F8DA;
+  }
+
+  .toggle-area {
+    width: 100%;
+    height: 100%;
+    border: solid 1px #999999;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: white;
+
+    &.error {
+      border-bottom-color: red;
+    }
+
+    &.focused {
+      border-color: #40DA4A;
+      border-radius: 3px 3px 0 0;
+  		box-shadow: 0 0 3px #D8F8DA;
+      border-bottom: none;
+    }
+
+    input {
+      height: 100%;
+      width: 75%;
+      border: none;
+      padding-left: 2px;
+      font-size: 1em;
+      flex-grow: 1;
+      background-color: transparent;
+      outline: none;
+    }
+
+    i {
+      flex-shrink: 0;
+      width: 30px;
+      line-height: 30px;
+      font-size: 1.5em;
+      text-align: center;
+      transform: rotate(90deg);
+      transition: all 250ms ease;
+
+      &.rotateup {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .drop-down-options {
+    position: absolute;
+    z-index: 1;
+    width: 99%;
+    height: 0px;
+    border: none;
+    transition: all 200ms;
+    overflow: auto;
+    background: white;
+
+    &.expanded {
+      height: 200px;
+      max-height: 200px;
+      box-shadow: 0 3px 3px 2px #D8F8DA;
+      border: solid 1px #40DA4A;
+      border-top: none;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .drop-down-option {
+      cursor: pointer;
+      padding-left: 10px;
+
+      &.hidden {
+        display: none;
+      }
+
+      &:hover, &.highlighted {
+        background-color: #D8F8DA;
+      }
+    }
+  }
+}
+
