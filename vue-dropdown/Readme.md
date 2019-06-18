@@ -6,7 +6,7 @@ This is a dropdown component for VueJS.
 Can type in to filter out the options.
 Supports up and down arrow navigation.
 
-## Improvements:
+## Possible improvements:
 * Automatically select the first option if current option is filtered out.
 * Automatically scroll up and down following up and down arrow navigation.
 * Handle filtering of options through a computed property
